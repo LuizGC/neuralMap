@@ -5,15 +5,14 @@ div.navbar.navbar-inverse.navbar-fixed-top
 				span.icon-bar
 				span.icon-bar
 				span.icon-bar
-			a.brand(href="#")
+			a.brand(href="/")
 				| GeoNeuro
 			div.nav-collapse.collapse
 				ul.nav
-					li.active
-						a(href="#") Home
-					li
-						a(href="#about") Train
-					li
-						a(href="#contact") Dados
-					li
-						a(href="#contact") Sobre
+					each menuitem in [{title:'Home',url:'/'},{title:'Train',url:'/train'},{title:'Dados',url:'/dados'}, {title:'Sobre',url:'/sobre'}]
+						if (menuitem.title == title)
+							li.active
+								a.active(href=menuitem.url) #{menuitem.title}
+						else
+							li
+								a(href=menuitem.url) #{menuitem.title}
