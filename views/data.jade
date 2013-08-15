@@ -5,6 +5,20 @@ block content
 		h1 Visualizar e Editar Dados
 		p Visualizar e Editar Dados
 
+		table.table.table-striped.table-bordered.table-condensed
+			thead
+				tr
+					th Sexo
+					th Latitude
+					th Longitude
+			tbody
+				each entrevista in entrevistas
+					tr
+						td= entrevista.sexo
+						td= entrevista.latitude
+						td= entrevista.longitude
+
+
 
 block footer
-	script(src='/javascript/viewData.js')
+	script(src='/javascripts/viewData.js')
