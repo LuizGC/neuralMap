@@ -1,0 +1,24 @@
+extends layout
+
+block content
+	div.container(ng-controller="Ocorrencias")
+		h1 Visualizar Ocorrências
+		p Visualizar Ocorrências
+
+		table.table.table-striped.table-bordered.table-condensed
+			thead
+				tr
+					th
+					th Hora
+					th Logradouro
+			tbody
+				each ocorrencia , i in ocorrencias
+					tr
+						td= i + 1
+						td= ocorrencia.hora
+						td= ocorrencia.logradouro
+
+
+
+block footer
+	script(src='/javascripts/ocorrencias.js')
