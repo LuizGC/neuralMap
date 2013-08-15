@@ -2,10 +2,9 @@
 
 	var Ocorrencias = angular.module('Ocorrencias',[]);
 
-	Ocorrencias.controller('Ocorrencias', ['$scope', function($scope) {
+	Ocorrencias.controller('show', ['$scope', function($scope) {
 
 		$scope.ocorrencias = [];
-		$scope.oi = "oi";
 	}])
 
 
