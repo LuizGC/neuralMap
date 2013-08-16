@@ -1,7 +1,7 @@
 extends layout
 
 block content
-	div.container(ng-controller="ocorrencias")
+	div.container(ng-controller="entrevistas")
 		h1 Visualizar Ocorrências
 		p Visualizar Ocorrências
 
@@ -9,16 +9,16 @@ block content
 			thead
 				tr
 					th
-					th Hora
-					th Logradouro
+					th Lula
+					th Aecio
 			tbody
-				each ocorrencia , i in ocorrencias
+				each entrevista , i in entrevistas
 					tr
 						td= i + 1
-						td= ocorrencia.hora
-						td= ocorrencia.logradouro
+						td= entrevista.lula
+						td= entrevista.aecio
 
 
 
 block footer
-	script(src='/javascripts/ocorrencias.js')
+	script(src='/javascripts/entrevistas.js')

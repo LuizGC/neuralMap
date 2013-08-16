@@ -9,7 +9,7 @@ div.navbar.navbar-inverse.navbar-fixed-top
 				| GeoNeuro
 			div.nav-collapse.collapse
 				ul.nav
-					each menuitem in [{title:'Home',url:'/'},{title:'Train',url:'/train'},{title:'Ocorrências',url:'/ocorrencias'}, {title:'Sobre',url:'/sobre'}]
+					each menuitem in [{title:'Home',url:'/'},{title:'Train',url:'/train'},{title:'Ocorrências',url:'/ocorrencias'},{title:'Entrevistas',url:'/entrevistas'}, {title:'Sobre',url:'/sobre'}]
 						if (menuitem.title == title)
 							li.active
 								a.active(href=menuitem.url) #{menuitem.title}
