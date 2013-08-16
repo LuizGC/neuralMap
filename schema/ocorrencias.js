@@ -15,7 +15,9 @@ var OcorrenciasSchema = new Schema(
 		//data : Date,
 		num_logradouro : Number,
 		setor : Number,
-		id_tipo_ocorrencia : Number
+		id_tipo_ocorrencia : Number ,
+		latitude: Number,
+		longitude: Number
 	}
 );
 
