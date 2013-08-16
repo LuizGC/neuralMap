@@ -12,7 +12,7 @@ var OcorrenciasSchema = new Schema(
 		num_boletim : Number,
 		mes : String,
 		nome_dia : String,
-		data : Date,
+		//data : Date,
 		num_logradouro : Number,
 		setor : Number,
 		id_tipo_ocorrencia : Number
