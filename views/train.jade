@@ -1,0 +1,55 @@
+extends layout
+
+block content
+	div.container(ng-controller="train")
+		.page-header
+			h1 Configurar a Rede Neural
+		p.lead
+			| Parâmetros para configuração do treinamento da rede neural
+
+
+		form.form-horizontal
+			.control-group
+				label.control-label(for='learningRate') Taxa de Aprendizado:
+				.controls
+					input#learningRate(type='text', placeholder='Taxa de Aprendizado da Rede')
+			.control-group
+				label.control-label(for='momentum') Momentum:
+				.controls
+					input#momentum(type='text', placeholder='Momentum')
+			.control-group
+				label.control-label(for='errorThresh') Limiar do erro:
+				.controls
+					input#errorThresh(type='text', placeholder='Limiar do erro a ser atingido')
+			.control-group
+				label.control-label(for='iterations') Épocas:
+				.controls
+					input#iterations(type='text', placeholder='Épocas de treinamento')
+			.control-group
+				label.control-label(for='hiddenLayers') Camadas Escondidas:
+				.controls
+					.input-append
+						input#hiddenLayers.span2(type='text', placeholder='Camadas Escondidas', ng-model="camada.neuronio")
+						button.btn(type='button', ng-click="adicionarNeuronioCamadaEscondida()") Add
+			.control-group
+				label.control-label(for='hiddenLayers') Camadas
+				.controls
+					table.camadas.table.table-bordered.table-striped(ng-show="camadas.length > 0")
+						tbody
+							tr(ng-repeat="camada in camadas")
+								td(ng-show="camada > 1") {{$index + 1}} - Possui {{camada}} neuronios
+									span.todo-destroy.pull-right.item-buttons(ng-click="removerCamadaEscondida(camada)")
+								td(ng-show="camada == 1") {{$index + 1}} - Possui {{camada}} neuronios
+									span.todo-destroy.pull-right.item-buttons(ng-click="removerCamadaEscondida(camada)")
+
+				.control-group
+				.controls
+					button.btn.btn-primary(type='submit') Treinar
+
+
+
+
+
+
+block footer
+	script(src='/javascripts/train.js')

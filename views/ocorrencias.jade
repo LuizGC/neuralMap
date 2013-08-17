@@ -10,13 +10,19 @@ block content
 				tr
 					th
 					th Hora
-					th Logradouro
+					th Latitude
+					th Longitude
+					th Dia
+					th Mes
 			tbody
 				each ocorrencia , i in ocorrencias
 					tr
 						td= i + 1
 						td= ocorrencia.hora
-						td= ocorrencia.logradouro
+						td= ocorrencia.latitude
+						td= ocorrencia.longitude
+						td= ocorrencia.nome_dia
+						td= ocorrencia.mes
 
 
 
