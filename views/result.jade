@@ -1,9 +1,25 @@
 extends layout
 
 block content
-	div.container
+	div.container(ng-controller="train")
 		.page-header
 			h1 Resultado do treinamento
+
+		.alert.alert-success
+			strong Sucesso: O treinamento foi realizado com sucesso.
+
+		p.lead Configuração da Rede Neural
+		p Taxa de Aprendizado: #{neural.net.learningRate}
+		p Momentum: #{neural.net.momentum}
+		p Limiar do erro: #{neural.configuracao.errorThresh}
+		p Limite de épocas: #{neural.configuracao.iterations}
+		p Erro do treinamento: #{neural.trainingOutput.error}
+		p Epocas de treinamento: #{neural.trainingOutput.iterations}
+
+		.control-group
+			.controls
+				button.btn.btn-primary(type='button', ng-click='voltarConfiguracaoTreinamento()') Treinar Novamente
+
 		p.lead
 			| Abaixo esta um gráfico de erros por épocas de treinamento.
 
@@ -12,7 +28,7 @@ block content
 		p.lead
 			| Abaixo esta o resultado do treinamento da rede neural. Com ele não é necessários realizar
 			| o treinamento novamente.
-		div.hero-unit= neural.net
+		div.hero-unit= neural.net.toFunction().toString()
 
 block footer
 	script(src='/javascripts/train.js')
@@ -22,8 +38,8 @@ block footer
 			labels : [#{neural.labels}],
 			datasets : [
 				{
-					fillColor : "rgba(220,220,220,0.5)",
-					strokeColor : "rgba(220,220,220,1)",
+					fillColor : "rgba(192,192,192,0.5)",
+					strokeColor : "rgba(192,192,192,1)",
 					pointColor : "rgba(220,220,220,1)",
 					pointStrokeColor : "#fff",
 					data : [#{neural.datas}]

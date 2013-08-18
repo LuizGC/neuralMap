@@ -27,6 +27,10 @@
 
 		};
 
+		$scope.voltarConfiguracaoTreinamento = function(){
+			window.location.href= "train";
+		};
+
 		$scope.treinar = function(){
 			var configuracao = {};
 			configuracao.learningRate = $scope.learningRate;
