@@ -12,29 +12,29 @@ block content
 			.control-group
 				label.control-label(for='learningRate') Taxa de Aprendizado:
 				.controls
-					input#learningRate(type='text', placeholder='Taxa de Aprendizado da Rede')
+					input#learningRate(type='text', placeholder='Default 0.3', ng-model="learningRate")
 			.control-group
 				label.control-label(for='momentum') Momentum:
 				.controls
-					input#momentum(type='text', placeholder='Momentum')
+					input#momentum(type='text', placeholder='Default 0.1', ng-model="momentum")
 			.control-group
 				label.control-label(for='errorThresh') Limiar do erro:
 				.controls
-					input#errorThresh(type='text', placeholder='Limiar do erro a ser atingido')
+					input#errorThresh(type='text', placeholder='Default 0.005', ng-model="errorThresh")
 			.control-group
 				label.control-label(for='iterations') Épocas:
 				.controls
-					input#iterations(type='text', placeholder='Épocas de treinamento')
+					input#iterations(type='text', placeholder='Default 20000', ng-model="iterations")
 			.control-group
 				label.control-label(for='hiddenLayers') Camadas Escondidas:
 				.controls
 					.input-append
-						input#hiddenLayers.span2(type='text', placeholder='Camadas Escondidas', ng-model="camada.neuronio")
+						input#hiddenLayers.span2(type='text', placeholder='Neorônios', ng-model="camada.quantidadeNeuronios")
 						button.btn(type='button', ng-click="adicionarNeuronioCamadaEscondida()") Add
-			.control-group
+			.control-group(ng-show="camadas.length > 0")
 				label.control-label(for='hiddenLayers') Camadas
 				.controls
-					table.camadas.table.table-bordered.table-striped(ng-show="camadas.length > 0")
+					table.camadas.table.table-bordered.table-striped
 						tbody
 							tr(ng-repeat="camada in camadas")
 								td(ng-show="camada > 1") {{$index + 1}} - Possui {{camada}} neuronios
@@ -42,9 +42,9 @@ block content
 								td(ng-show="camada == 1") {{$index + 1}} - Possui {{camada}} neuronios
 									span.todo-destroy.pull-right.item-buttons(ng-click="removerCamadaEscondida(camada)")
 
-				.control-group
+			.control-group
 				.controls
-					button.btn.btn-primary(type='submit') Treinar
+					button.btn.btn-primary(type='submit',ng-click='treinar()') Treinar
 
 
 

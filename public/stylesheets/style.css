@@ -20,3 +20,6 @@ span.todo-destroy {
 .todo-destroy:hover {
   background-position: -52px -26px;
 }
+canvas#error {
+  margin-bottom: 30px;
+}

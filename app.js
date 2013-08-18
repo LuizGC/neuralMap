@@ -4,7 +4,6 @@
  */
 
 var express = require('express');
-var routes = require('./routes');
 var ocorrencias = require('./routes/ocorrencias');
 var entrevistas = require('./routes/entrevistas');
 var train = require('./routes/train');
@@ -30,10 +29,12 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
+app.get('/', train.index);
 app.get('/ocorrencias', ocorrencias.index);
 app.get('/entrevistas', entrevistas.index);
-app.get('/train', train.index);
+app.get('/train', train.configuracao);
+app.post('/train', train.treinar);
+app.get('/result', train.result);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
