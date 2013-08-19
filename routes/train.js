@@ -51,6 +51,7 @@ var treinar = function(data, checkUnknownData,options){
 			neural.unknownDataError += checkUnknownData[index].output[err] - result[err];
 		}
 	}
+	neural.unknownDataError = neural.unknownDataError/(checkUnknownData.length*checkUnknownData[0].length);
 }
 
 
