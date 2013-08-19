@@ -27,20 +27,30 @@ var configuracao = function(body){
 		callbackPeriod : callbackPeriod,
 		entrada: body.entrada,
 		saida: body.saida,
-		log: true
+		log: true,
+		unknownData:body.unknownData
 
 	};
 };
 
-var treinar = function(data, options){
+var treinar = function(data, checkUnknownData,options){
 	neural.net = new brain.NeuralNetwork(options);
-	neural.error = [];
+	neural.error = [];//os erros são adicionandos na funcao  configuracao
 	neural.trainingOutput = neural.net.train(data, options);
 	neural.configuracao = {};
 	neural.configuracao.errorThresh = options.errorThresh;
 	neural.configuracao.iterations = options.iterations;
 	neural.entrada = options.entrada;
 	neural.saida = options.saida;
+	neural.unknownDataError = 0;
+
+
+	for(var index in checkUnknownData){
+		var result = neural.net.run(checkUnknownData[index].input);
+		for(var err in result){
+			neural.unknownDataError += checkUnknownData[index].output[err] - result[err];
+		}
+	}
 }
 
 
@@ -55,7 +65,11 @@ exports.treinar = function(req, res){
 		}
 		var entrada = req.body.entrada;
 		var saida = req.body.saida;
-		var data = [];
+
+		var dataTraining = [];
+		var checkUnknownData = [];
+		var unknownDataLimit = Math.round(entrevistas.length - entrevistas.length * req.body.unknownData/100);
+
 		for(var index in entrevistas){
 			var input = {};
 			if(entrada.educacao) input.educacao = normalizar(entrevistas[index].educacao);
@@ -75,11 +89,15 @@ exports.treinar = function(req, res){
 			if(saida.saude) output.saude = normalizar(entrevistas[index].saude);
 			if(saida.seguranca) output.seguranca = normalizar(entrevistas[index].seguranca);
 
-			data.push({input:input, output:output});
+			if(dataTraining.length < unknownDataLimit)
+				dataTraining.push({input:input, output:output});
+			else
+				checkUnknownData.push({input:input, output:output});
 		}
 
 
-		treinar(data, configuracao(req.body));
+		treinar(dataTraining, checkUnknownData,configuracao(req.body));
+
 
 		res.json({status : "ok"});
 	});
@@ -96,6 +114,7 @@ exports.result = function(req, res){
 	result.trainingOutput = neural.trainingOutput;
 	result.entrada = neural.entrada;
 	result.saida = neural.saida;
+	result.unknownDataError = neural.unknownDataError;
 
 	for(var index in neural.error){
 		var error = neural.error[index];

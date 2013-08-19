@@ -30,6 +30,7 @@
 		$scope.camadas = [];
 		$scope.entrada = entradaSaida();
 		$scope.saida = entradaSaida();
+		$scope.unknownData = 0;
 
 
 		$scope.adicionarNeuronioCamadaEscondida = function(){
@@ -57,6 +58,7 @@
 			configuracao.camadas = $scope.camadas;
 			configuracao.entrada = $scope.entrada;
 			configuracao.saida = $scope.saida;
+			configuracao.unknownData = $scope.unknownData;
 			document.getElementById("progress").style.display="";
 			var progress=0;
 			var funProgress = setInterval(function(){
