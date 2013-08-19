@@ -15,6 +15,36 @@ block content
 		p Limite de épocas: #{neural.configuracao.iterations}
 		p Erro do treinamento: #{neural.trainingOutput.error}
 		p Epocas de treinamento: #{neural.trainingOutput.iterations}
+		p Entrada:
+			if neural.entrada.educacao
+				|  Educação
+			if neural.entrada.escolaridade
+				|  Escolaridade
+			if neural.entrada.idade
+				|  Idade
+			if neural.entrada.renda
+				|  Renda
+			if neural.entrada.sexo
+				|  Sexo
+			if neural.entrada.saude
+				|  Saúde
+			if neural.entrada.seguranca
+				|  Segurança
+		p Saída:
+			if neural.saida.educacao
+				|  Educação
+			if neural.saida.escolaridade
+				|  Escolaridade
+			if neural.saida.idade
+				|  Idade
+			if neural.saida.renda
+				|  Renda
+			if neural.saida.sexo
+				|  Sexo
+			if neural.saida.saude
+				|  Saúde
+			if neural.saida.seguranca
+				|  Segurança
 
 		.control-group
 			.controls

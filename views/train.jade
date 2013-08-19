@@ -1,6 +1,11 @@
 extends layout
 
 block content
+	div#progress(style="display: none;")
+		.progress
+			#progressBar.bar(style='width: 0%;')
+
+
 	div.container(ng-controller="train")
 		.page-header
 			h1 Configurar a Rede Neural
@@ -41,10 +46,58 @@ block content
 									span.todo-destroy.pull-right.item-buttons(ng-click="removerCamadaEscondida(camada)")
 								td(ng-show="camada == 1") {{$index + 1}} - Possui {{camada}} neuronios
 									span.todo-destroy.pull-right.item-buttons(ng-click="removerCamadaEscondida(camada)")
+			.control-group
+				label.control-label(for='entradas') Entradas:
+				.controls
+					label.checkbox.inline
+						input(type='checkbox', value='educacao', ng-model='entrada.educacao')
+						| Educação
+					label.checkbox.inline
+						input(type='checkbox', value='escolaridade', ng-model='entrada.escolaridade')
+						| Escolaridade
+					label.checkbox.inline
+						input(type='checkbox', value='idade', ng-model='entrada.idade')
+						| Idade
+					label.checkbox.inline
+						input(type='checkbox', value='renda', ng-model='entrada.renda')
+						| Renda
+					label.checkbox.inline
+						input(type='checkbox', value='sexo', ng-model='entrada.sexo')
+						| Sexo
+					label.checkbox.inline
+						input(type='checkbox', value='saude', ng-model='entrada.saude')
+						| Saúde
+					label.checkbox.inline
+						input(type='checkbox', value='seguranca', ng-model='entrada.seguranca')
+						| Segurança
+			.control-group
+				label.control-label(for='saidas') Saídas:
+				.controls
+					label.checkbox.inline
+						input(type='checkbox', value='educacao', ng-model='saida.educacao')
+						| Educação
+					label.checkbox.inline
+						input(type='checkbox', value='escolaridade', ng-model='saida.escolaridade')
+						| Escolaridade
+					label.checkbox.inline
+						input(type='checkbox', value='idade', ng-model='saida.idade')
+						| Idade
+					label.checkbox.inline
+						input(type='checkbox', value='renda', ng-model='saida.renda')
+						| Renda
+					label.checkbox.inline
+						input(type='checkbox', value='sexo', ng-model='saida.sexo')
+						| Sexo
+					label.checkbox.inline
+						input(type='checkbox', value='saude', ng-model='saida.saude')
+						| Saúde
+					label.checkbox.inline
+						input(type='checkbox', value='seguranca', ng-model='saida.seguranca')
+						| Segurança
 
 			.control-group
-				.controls
-					button.btn.btn-primary(type='submit',ng-click='treinar()') Treinar
+					.controls
+						button.btn.btn-primary(type='submit',ng-click='treinar()') Treinar
 
 
 

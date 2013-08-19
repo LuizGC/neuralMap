@@ -23,3 +23,19 @@ span.todo-destroy {
 canvas#error {
   margin-bottom: 30px;
 }
+div#progress {
+  background-color: rgba(2, 2, 2, 0.5);
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  top: 0;
+}
+div#progress .progress {
+  left: 50%;
+  margin-left: -300px;
+  margin-top: -20px;
+  position: absolute;
+  top: 50%;
+  width: 500px;
+}

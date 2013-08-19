@@ -1,5 +1,12 @@
 var brain = require("brain")
+var Entrevistas = require('../schema/entrevistas');
 var neural = {};
+
+var normalizar = function(valor){
+	  if(valor == 99)
+	    return 6 * 0.166666667;
+	return valor * 0.166666667;
+}
 
 var configuracao = function(body){
 	var callbackPeriod = 200;
@@ -17,7 +24,10 @@ var configuracao = function(body){
 		errorThresh: body.errorThresh || 0.005,
 		iterations: body.iterations || 20000,
 		callback: function(error){neural.error.push(error)},
-		callbackPeriod : callbackPeriod
+		callbackPeriod : callbackPeriod,
+		entrada: body.entrada,
+		saida: body.saida,
+		log: true
 
 	};
 };
@@ -29,6 +39,8 @@ var treinar = function(data, options){
 	neural.configuracao = {};
 	neural.configuracao.errorThresh = options.errorThresh;
 	neural.configuracao.iterations = options.iterations;
+	neural.entrada = options.entrada;
+	neural.saida = options.saida;
 }
 
 
@@ -37,14 +49,40 @@ exports.configuracao = function(req, res){
 };
 
 exports.treinar = function(req, res){
-	var data = [{input: [0, 0], output: [0]},
-		{input: [0, 1], output: [1]},
-		{input: [1, 0], output: [1]},
-		{input: [1, 1], output: [0]}];
+	Entrevistas.find(function (err, entrevistas) {
+		if(err){
+			res.json({status : "error"});
+		}
+		var entrada = req.body.entrada;
+		var saida = req.body.saida;
+		var data = [];
+		for(var index in entrevistas){
+			var input = {};
+			if(entrada.educacao) input.educacao = normalizar(entrevistas[index].educacao);
+			if(entrada.escolaridade) input.escolaridade = normalizar(entrevistas[index].escolaridade);
+			if(entrada.idade) input.idade = normalizar(entrevistas[index].idade);
+			if(entrada.renda) input.renda = normalizar(entrevistas[index].renda);
+			if(entrada.sexo) input.sexo = normalizar(entrevistas[index].sexo);
+			if(entrada.saude) input.saude = normalizar(entrevistas[index].saude);
+			if(entrada.seguranca) input.seguranca = normalizar(entrevistas[index].seguranca);
 
-	treinar(data, configuracao(req.body));
+			var output = {};
+			if(saida.educacao) output.educacao = normalizar(entrevistas[index].educacao);
+			if(saida.escolaridade) output.escolaridade = normalizar(entrevistas[index].escolaridade);
+			if(saida.idade) output.idade = normalizar(entrevistas[index].idade);
+			if(saida.renda) output.renda = normalizar(entrevistas[index].renda);
+			if(saida.sexo) output.sexo = normalizar(entrevistas[index].sexo);
+			if(saida.saude) output.saude = normalizar(entrevistas[index].saude);
+			if(saida.seguranca) output.seguranca = normalizar(entrevistas[index].seguranca);
 
-	res.json({status : "ok"});
+			data.push({input:input, output:output});
+		}
+
+
+		treinar(data, configuracao(req.body));
+
+		res.json({status : "ok"});
+	});
 };
 
 exports.result = function(req, res){
@@ -56,6 +94,8 @@ exports.result = function(req, res){
 	result.datas = [];
 	result.configuracao = neural.configuracao;
 	result.trainingOutput = neural.trainingOutput;
+	result.entrada = neural.entrada;
+	result.saida = neural.saida;
 
 	for(var index in neural.error){
 		var error = neural.error[index];
