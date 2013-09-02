@@ -1,15 +1,3 @@
-% INFOCOMP Style based on the 'abbrv' Style
-% Adaptado por Hyggo Oliveira de Almeida
-% BibTeX standard bibliography style `abbrv'
-        % version 0.99a for BibTeX versions 0.99a or later, LaTeX version 2.09.
-        % Copyright (C) 1985, all rights reserved.
-        % Copying of this file is authorized only if either
-        % (1) you make absolutely no changes to your copy, including name, or
-        % (2) if you do make changes, you name it something other than
-        % btxbst.doc, plain.bst, unsrt.bst, alpha.bst, and abbrv.bst.
-        % This restriction helps ensure that all standard styles are identical.
-        % The file btxbst.doc has the documentation for this style.
-
 ENTRY
   { address
     author
