@@ -5,7 +5,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage[T1]{fontenc}
-\usepackage[brazilian]{babel}
+%\usepackage[brazilian]{babel}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{subfigure}
@@ -15,32 +15,38 @@
 \renewcommand{\captionfont}{\footnotesize}
 \renewcommand{\captionlabelfont}{\footnotesize \bfseries}
 
-\newtheorem{exemplo}{Exemplogfsdgdgdfsgdfsgsdfgdsfgdsfgdsfgdsf}
+\newtheorem{exemplo}{Exemplo}
 
 \address{UFLA - Universidade Federal de Lavras\\
         DCC - Departmento de Ci\^encia da Computa\c{c}\~ao\\
         P.O. Box 3037 - Campus da UFLA
 		37200-000 - Lavras (MG)- Brazil\\
-        $^1$\url{(first,second)@dcc.ufla.br}\\
-        $^2$\url{third@comp.ufla.br}}
+        $^1$\url{luizcosta@posgrad.ufla.br}}
 
-\title{Model for Articles to INFOCOMP}
+\title{NeuroGrubi: a Web Application of Artificial Neural Networks Simulator}
 
 \author{
-        First Author of the Article$^1$ \\
-        Second Author of the Article$^1$ \\
-        Third Author of the Article$^2$
+        Luiz Augusto Guimarães Costa$^1$ 
 }
 
-\abstract{This paper describes a template for INFOCOMP manuscripts.
-INFOCOMP receives papers in continuous flow and publish all accepted
-papers, however not necessarilly in the following issue.}
+\abstract{This paper aims to develop a methodology that facilitates the use 
+of Artificial Neural Networks and more broadly to initiate a process of using 
+the revolutionary techniques of Artificial Neural Networks in day-to-day, 
+especially in business.
+For this, we first proposed the development of a prototype simulator Artificial 
+Neural Networks as web application, named NeuroGrubi, so people can not only 
+use it, but also have access to the code. The Web was chosen because the easy 
+access and availability offered to potential users of such systems.
+The work will also indicate how this prototype can then be optimized and 
+improved in the future to promote the use of techniques of Neural Networks. 
+The purpose is to increase the use of neural networks technology by enterprises, 
+leaving transparent to the end user, without specific details about the area.}
 
-\keywords{template, manuscripts, model, INFOCOMP.}
+\keywords{Artificial Neural Networks, Web Application, Javascript.}
 
-\receivedate{July 19th, 2011}
+\receivedate{}
 
-\acceptdate{September 1st, 2011}
+\acceptdate{}
 
 \begin{document}
 
@@ -49,142 +55,13 @@ papers, however not necessarilly in the following issue.}
 
 \newpage
 
-\section{Introduction}
-
-In edition INFOCOMP Journal 2008 shall be published only papers
-written in English. This change will allow that articles can be read
-by several researchers from different countries. Thus, documents
-submitted in Portuguese to be translated into good English.
-
-The used principal source must be Times or Times
-New Roman, size 10 points.
-
-The space between lines must be of 12 points. After each paragraph
-must be added an additional space of 3 points.
-
-The used format of page is letter (to letter). The maximum amount of
-pages is ten. The edges to be used are:
-\begin{itemize}
-\item top: 3cm;
-\item botton, left and right: 2.5cm.
-\end{itemize}
-
-\section{First Page}
-
-The first page must contain, in the following sequence:
-
-\begin{itemize}
-\item Title of the paper in source Helvetica or Arial, size 14 points
-in boldface. Space before 12 points and after 24 points. Single
-spacing between the lines;
-\item Name of the authors in source Times or Times New Roman, size 10
-points in high box, centered, space after of 3 points;
-\item Address of the authors, in source Times or Times New Roman, size
-10, centered, space after of 3 points;
-\item Abstract of the paper in source Times or Times New Roman, size
-10, with jib of 1cm to the left and the right, space after of 3 points
-(the title ``Abstract:'' it must be in boldface);
-\item Keywords keys of the paper, with identical formatting to the Abstract.
-\end {itemize} 
+\input{Introduction}
+\input{RelatedWork}
+\input{NeuroGrubi}
+\input{Conclusion}
 
 
-\section{Sections}
 
-Title of sections and subsection must be in source Arial or Helvetic,
-size 10 points, in boldface. It must have an additional space of 9
-points before the paragraph of heading and 3 after. The sections and
-subsection must be numbered in the format: \\
-
-1 Title of section 1
-
-1.1 Title of Subsection 1.1
-
-1.2 Title of Subsection 1.2
-
-2 Title of section 2
-
-2.1 Title of section 2.1\\
-
-The first paragraph of each section does not have to be indent. The
-too much paragraphs must be indent in 0.5cm. The text of the paper
-must be in two separate columns for 0.5cm.
-
-\section{Figures and tables}
-
-Figures and tables can exceed the limits of the columns (but not them
-of the edges). The heading of one given figure (to see Figure
-\ref{fig:1}) must come below of the same one and centered.
-
-\begin{figure}[!htbp]
-  \begin{center}
-    \includegraphics[scale=3]{exfigura}
-    \caption{Figure of paper}
-    \label{fig:1}
-  \end{center}
-\end{figure}
-
-Before each figure must have a space of 6 points.  Between the figure
-and the legend, a space of 3 points. After the legend must have a
-space of 6 points. The legend must be in Times or Times New Roman,
-size 9 points.
-
-The table heading must come above of the same ones (to see Table
-\ref{table1}).
-
-\begin{table}[!htb]
-  \begin{center}
-    \caption{Example of Table}
-    \label{table1}
-    \vspace{0.2cm}
-    \footnotesize
-    \begin{tabular}{|c|c|c|c|c|c|}
-      \hline
-      $U$ & $vitA$ & $vitC$ & $vitD$ & $prot$ & $lip$ \\
-      \hline
-      \hline
-      $d_1$ & 1 & 3 & 4 & 2 & 3\\
-      $d_2$ & 1 & 3 & 3 & 3 & 2\\
-      $d_3$ & 1 & 3 & 4 & 3 & 1\\
-      $d_4$ & 3 & 5 & 2 & 5 & 2\\
-      $d_5$ & 4 & 5 & 2 & 5 & 1\\
-      $d_6$ & 3 & 5 & 2 & 3 & 4\\
-      $d_7$ & 4 & 4 & 1 & 3 & 2\\
-      \hline
-    \end{tabular}
-    %\vspace{-0.7cm}
-  \end{center}
-\end{table}
-
-\section{Final version of the paper}
-
-In final version of the paper, the authors must send the follows
-files: 
-\begin{enumerate}[a)]
-\item Final paper in pdf;
-\item Code source {\bf only in Latex};
-\item The figures should sent separately, only in the formats: jpg,
-png, eps and bmp.
-\item All files must compressed within a file in formats: zip, tar,
-rar or another.
-\end{enumerate}
-
-In the final version all the reviews must be considered to modify the
-text. Papers should be submitted to INFOCOMP using the JEMS system of
-Brazilian Computer Society in the page:\\
-\url{https://submissoes.sbc.org.br/infocomp}
-
-\section{Bibliograph References}
-
-The bibliographical references will have to follow Norma NBR6023 of
-the ABNT-2000, listed in sequence alphabetical, with obligator
-numeration. 
-
-The citations in the text must be made to leave of the numeration of
-the bibliographical reference. The references must be inserted in file
-bibtex, such as in the {\em example.bib} appended. 
-
- Example, ``In \cite{Correia}, is presented a taxonomy for medium
-access control protocols in wireless sensor networks ...''.
 
 \bibliography{example}
 \end{document}

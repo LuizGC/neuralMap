@@ -3,6 +3,47 @@ extends layout
 block content
 	div.container
 		.page-header
-			h1 Sistema de Gestão Governamental
-		p.lead
-			| Sistema de apoiar as tomadas de decisões para gestão pública.
+			h1 Gerenciar Bases de Dados
+
+
+		span.btn.btn-file Faça Upload de Nova Base de dados: &nbsp;&nbsp;
+			input(type='file')
+
+
+		br
+		br
+
+
+		table.table.table-striped.table-bordered.table-condensed
+			thead
+				tr
+					th #
+					th Nome
+					th Qtde Linhas
+					th Ação
+			tbody
+				tr
+					th 1
+					td Base 1
+					td 200
+					td
+						a Visualizar &nbsp;&nbsp;&nbsp;&nbsp;
+						a Treinar
+
+				tr
+					th 2
+					td Base 2
+					td 5
+					td
+						a Visualizar &nbsp;&nbsp;&nbsp;&nbsp;
+						a Treinar
+
+				tr
+					th 3
+					td Base 3
+					td 1000
+					td
+						a Visualizar &nbsp;&nbsp;&nbsp;&nbsp;
+						a Treinar
+
+

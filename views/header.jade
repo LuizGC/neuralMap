@@ -6,9 +6,10 @@ div.navbar.navbar-inverse.navbar-fixed-top
 				span.icon-bar
 				span.icon-bar
 			a.brand(href="/")
-				| GeoNeuro
+				| NeuroGrubi
 			div.nav-collapse.collapse
 				ul.nav
+				//
 					each menuitem in [{title:'Home',url:'/'},{title:'Train',url:'/train'},{title:'Entrevistas',url:'/entrevistas'}, {title:'Sobre',url:'/sobre'}]
 						if (menuitem.title == title)
 							li.active
