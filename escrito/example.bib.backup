@@ -1,0 +1,161 @@
+@book{Bishop2005,
+  added-at = {2012-08-18T20:58:39.000+0200},
+  author = {Bishop, Christopher M.},
+  biburl = {http://www.bibsonomy.org/bibtex/2d0617b6f86ffb0e84b77a14f2810e72b/dalbem},
+  date-added = {2007-09-10 14:57:10 -0300},
+  date-modified = {2007-09-10 14:57:10 -0300},
+  groups = {public},
+  interhash = {e7e5ff5e89d29b7fa2787aad12bea123},
+  intrahash = {d0617b6f86ffb0e84b77a14f2810e72b},
+  keywords = {jabref:noKeywordAssigned},
+  publisher = {{Oxford University Press}},
+  timestamp = {2012-08-18T20:58:39.000+0200},
+  title = {Neural Networks for Pattern Recognition},
+  username = {dalbem},
+  year = 1995
+}
+
+@INPROCEEDINGS{1327478,
+author={Xing Liu},
+booktitle={Cognitive Informatics, 2004. Proceedings of the Third IEEE 
+International Conference on},
+title={Building Linux based neural network applications},
+year={2004},
+pages={214-219},
+keywords={Linux;adaptive systems;embedded systems;learning (artificial 
+intelligence);neural nets;software engineering;Linux based neural network 
+applications;adaptive system design;arbitrary nonlinear mapping 
+approximation;arbitrary nonlinear mappings;data collection;data 
+retraining;embedded systems;input-output relationship;multitasking operating 
+system;neural network retraining;process parameters;time-varying 
+parameters;Application software;Automatic control;Embedded software;Embedded 
+system;Linux;Modeling;Multitasking;Neural networks;Pattern recognition;Real time 
+systems},
+doi={10.1109/COGINF.2004.1327478},}
+
+
+@INPROCEEDINGS{1556318,
+author={Luna, I. and Soares, S. and Magalhaes, M.H. and Ballini, R.},
+booktitle={Neural Networks, 2005. IJCNN '05. Proceedings. 2005 IEEE 
+International Joint Conference on},
+title={Streamflow forecasting using neural networks and fuzzy clustering 
+techniques},
+year={2005},
+volume={4},
+pages={2631-2636 vol. 4},
+keywords={FIR filters;autoregressive processes;hydroelectric power stations;load 
+forecasting;neural nets;pattern clustering;power engineering computing;FIR 
+neural network;fuzzy clustering techniques;fuzzy clustering-based 
+model;hydroelectric systems planning;periodic autoregressive model;recurrent 
+neural network;streamflow forecasting;Backpropagation algorithms;Clustering 
+algorithms;Finite impulse response filter;Fuzzy neural networks;Load 
+forecasting;Neural networks;Predictive models;Production planning;Recurrent 
+neural networks;Water resources},
+doi={10.1109/IJCNN.2005.1556318},}
+
+@INPROCEEDINGS{4679182,
+author={Hongyan Liu and Liya Cai and Xiaojuan Wu},
+booktitle={Wireless Communications, Networking and Mobile Computing, 2008. WiCOM 
+'08. 4th International Conference on},
+title={Grey-RBF Neural Network Prediction Model for City Electricity Demand 
+Forecasting},
+year={2008},
+pages={1-5},
+keywords={load forecasting;power consumption;power markets;Grey prediction;city 
+electricity demand forecasting;electric consumption;grey-RBF neural network 
+prediction model;long-term electric power demand;power markets;Cities and 
+towns;Decision making;Demand forecasting;Economic forecasting;Electricity supply 
+industry;Neural networks;Power markets;Power system modeling;Prediction 
+algorithms;Predictive models},
+doi={10.1109/WiCom.2008.1274},}
+
+@INPROCEEDINGS{5726693,
+author={Wilson, C.L. and Wilkinson, R. A. and Garris, M.D.},
+booktitle={Neural Networks, 1990., 1990 IJCNN International Joint Conference 
+on},
+title={Self-organizing neural network character recognition on a massively 
+parallel computer},
+year={1990},
+pages={325-329 vol.2},
+keywords={character recognition;learning systems;neural nets;parallel 
+algorithms;ART-1-based learning algorithm;distributed array processor;feature 
+localization;filtered images;font-independent character recognition;hand-printed 
+characters;least-squares optimized Gabor filtering;neural network 
+weights;neural-network-based methods;noise reduction;parallel 
+computer;self-organizing sets},
+doi={10.1109/IJCNN.1990.137734},}
+
+@INPROCEEDINGS{5715226,
+author={Gomide, P. and Milidiu, R.L.},
+booktitle={Neural Networks (SBRN), 2010 Eleventh Brazilian Symposium on},
+title={Assessing Stock Market Time Series Predictors Quality through a Pairs 
+Trading System},
+year={2010},
+pages={133-139},
+keywords={economic forecasting;forecasting theory;investment;neural nets;stock 
+markets;time series;ANN model;BM and FBOVESPA stock exchange;forecasting error 
+metric;forecasting quality;official Brazilian stock exchange;pair 
+trading;predictor quality;return on investment;stock market behaviour 
+forecasting;time series;trading system metrics;Artificial neural 
+networks;Forecasting;Investments;Measurement;Predictive models;Stock 
+markets;Training;Artificial Neural Networks;Pairs Trading;Stock Market;Trading 
+System},
+doi={10.1109/SBRN.2010.31},
+ISSN={1522-4899},}
+
+
+@INPROCEEDINGS{549040,
+author={Zhou, R. W. and Quek, C.},
+booktitle={Neural Networks, 1996., IEEE International Conference on},
+title={An automatic fuzzy neural network driven signature verification system},
+year={1996},
+volume={2},
+pages={1034-1039 vol.2},
+keywords={fuzzy neural nets;generalisation (artificial intelligence);handwriting 
+recognition;learning (artificial intelligence);automatic fuzzy neural network 
+driven signature verification system;generalization ability;high computational 
+ability;learning ability;pseudo outer-product based fuzzy neural network;skilled 
+forgeries;Credit cards;Data acquisition;Feature extraction;Forgery;Fuzzy neural 
+networks;Handwriting recognition;Image processing;Psychology;Synthetic aperture 
+sonar;System testing},
+doi={10.1109/ICNN.1996.549040},}
+
+@INPROCEEDINGS{6392147,
+author={Caldeira, E. and Brandao, G. and Campos, H. and Pereira, A.},
+booktitle={Web Congress (LA-WEB), 2012 Eighth Latin American},
+title={Characterizing and Evaluating Fraud in Electronic Transactions},
+year={2012},
+pages={115-122},
+keywords={belief networks;credit transactions;electronic money;fraud;neural 
+nets;random processes;regression analysis;retail data processing;security of 
+data;trees (mathematics);Bayesian network;Brazilian electronic payment 
+service;computational intelligence techniqu;credit card 
+operation;ecommerce;economic efficiency;electronic transaction;fraud cases;fraud 
+characterization;fraud detection;fraud evaluation;fraud identification;logistic 
+regression;neural network;online retailers;random forest;Data Mining;Fraud 
+Detection;Neural Networks;Random Forest;e-Business},
+doi={10.1109/LA-WEB.2012.16},}
+
+@INPROCEEDINGS{5953960,
+author={Kondo, T.},
+booktitle={Hybrid Intelligent Models And Applications (HIMA), 2011 IEEE Workshop 
+On},
+title={Revised GMDH-type neural network using artificial intelligence and its 
+application to medical image diagnosis},
+year={2011},
+pages={76-83},
+keywords={artificial intelligence;data handling;medical image processing;neural 
+nets;artificial intelligence technology;feedback loop calculations;group method 
+of data handling;lung cancer;medical image diagnosis;prediction sum of 
+squares;revised GMDH-type neural network;Artificial neural networks;Cancer;Input 
+variables;Lungs;Medical diagnostic imaging;Neurons;Artificial 
+Intelligence;GMDH;Heuristic Self-Organization;Lung Cancer;Medical Image 
+Diagnosis;Neural Networks},
+doi={10.1109/HIMA.2011.5953960},}
+
+
+@MISC{brainjs,
+month = set,
+year = {2013},
+url = {https://github.com/harthur/brain}
+}

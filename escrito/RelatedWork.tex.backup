@@ -1,0 +1,41 @@
+\section{Related Work}
+
+The technology of artificial neural networks has been widely used in recent 
+years in several areas of application. The use of this technology is already 
+widespread in many areas, where the great performance objectives, monitoring and 
+systems integration activities are targeted and increasingly arise solutions 
+that use neural networks in new areas that exceed the solutions obtained by 
+conventional \cite{1327478}.
+
+Examples of some areas where the use of artificial neural networks have achieved 
+great success:
+
+\begin{itemize}
+\item Streamflow Forecasting \cite{1556318}
+\item Prediction of Electricity demand \cite{4679182}
+\item Character Recognition \cite{5726693}
+\item Stock Market Predictor \cite{5715226}
+\item Signature Validation \cite{549040}
+\item Characterizing and Evaluating Fraud in Electronic Transactions 
+\cite{6392147}
+\item Medical Image Diagnosis \cite{5953960}
+\end{itemize}
+
+For access to neural networks help a larger group of people, this work suggested 
+the development of a web application that provides the user with an interesting 
+solution to their problems.
+
+É aparente que uma Rede Neural tem seu poder computacional relacionado 
+principalmente a sua estrutura fortemente distribuída e paralela e também à sua 
+capacidade de aprender e por conseqüência generalizar (ou seja, capacidade que a 
+Rede Neural possui de  produzir saídas razoáveis para entradas não apresentadas 
+na fase de aprendizagem/treinamento). Essas duas capacidades de 
+informação-processamento tornam possível a solução de problemas complexos por 
+meio da utilização de técnicas de Redes Neurais Artificiais. Na prática, 
+entretanto, Redes Neurais Artificiais não podem por si só gerar soluções. Devem 
+sim, serem integradas numa consistente abordagem de Engenharia de Sistemas. 
+Sendo mais específico, deve-se tomar o problema complexo o qual desejamos chegar 
+a uma solução, decompô-lo num certo número de tarefas relativamente simples e 
+atribuir a determinadas destas tarefas (reconhecimento de padrões, memória 
+associativa, controle, etc.) técnicas de Redes Neurais Artificiais para 
+solucioná-las.

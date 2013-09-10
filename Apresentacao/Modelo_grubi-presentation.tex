@@ -1,0 +1,114 @@
+\documentclass{grubi-presentation}
+\usepackage[brazilian]{babel}
+
+\author{Luiz Augusto Guimarães Costa}
+\title{Aplicando Redes Neurais no Desenvolvimento de Políticas Públicas}
+
+
+\begin{document}
+
+\frame{\maketitle}
+\begin{frame}{Sumário}
+\tableofcontents
+\end{frame}
+
+\section{Introdução}
+\begin{frame}{Introdução}
+\begin{block}{}
+  \begin{itemize}
+    \item Políticas públicas ou Políticas sociais é um conceito da Política e da Administração que designa certo tipo 
+    de orientação para a tomada de decisões em assuntos públicos, políticos ou coletivos \cite{viana_abordagens_2013}.
+    \item As políticas buscam responder as demandas da sociedade. 
+  \end{itemize}	
+\end{block}
+\end{frame}
+
+\section{Descrição do Problema}
+\begin{frame}{Descrição do Problema}
+\begin{block}{}
+  \begin{itemize}
+    \item Constatar os problemas centrais da sociedade é um impasse na elaboração de políticas públicas eficientes \cite{jannuzzi_estimacao_2013}.
+    \item Por que cada grupo social apresenta diferentes demandas.
+  \end{itemize}
+\end{block}
+\end{frame}
+
+
+\section{Objetivo}
+\begin{frame}{Objetivo}
+\begin{block}{}
+  O objetivo desse trabalho é desenvolver uma rede neural para classificar qual área (saúde, educação ou segurança) esta mais carente de ações públicas, 
+  assim sendo capaz de auxiliar na elaboração de políticas públicas efetivas.   
+\end{block}
+\end{frame}
+
+\section{Ferramenta}
+\begin{frame}{Ferramenta}
+\begin{block}{}
+  A ferramenta utilizada foi a \em{NeuroGrubi}, que é uma aplicação web para treinamento de redes neurais artificiais.  
+  \begin{figure}[!htb]
+     \centering
+     \includegraphics[scale=0.2]{neuroGrubi.png}
+     \caption{Tela de configuração da rede neural no \em{NeuroGrubi}}
+     \label{Tela de configuração da rede neural no NeuroGrubi}
+  \end{figure}
+
+\end{block}
+\end{frame}
+
+
+\section{Conjunto de Treinamento}
+\begin{frame}{Conjunto de Treinamento}
+\begin{block}{}
+  \begin{itemize}
+    \item Os dados foram obtidos no \href{http://dados.gov.br}{Portal Brasileiro de Dados Abertos}
+    \item Possui 1034 amostras de um pesquisa do \em{IBGE} sobre segurança pública, saúde e educação em Minas Gerais.
+    \item Cada amostra possuem informações sobre renda, escolaridade, sexo, idade, atenção com saúde, educação e segurança. 
+  \end{itemize}
+\end{block}
+\end{frame}
+
+\section{Configuração do Treinamento}
+\begin{frame}{Configuração da Rede Neural}
+\begin{block}{}
+  \begin{figure}[!htb]
+     \centering
+     \includegraphics[scale=0.2]{configuracao.png}
+     \caption{A configuração de treinamento da rede neural no \em{NeuroGrubi}}
+     \label{A configuração de treinamento da rede neural no NeuroGrubi}
+  \end{figure}
+\end{block}
+\end{frame}
+
+\section{Resultados}
+\begin{frame}{Resultado do Treinamento}
+\begin{block}{}
+  \begin{figure}[!htb]
+     \centering
+     \includegraphics[scale=0.17]{resultado.png}
+     \caption{Relatório com o resultado do treinamento no \em{NeuroGrubi}}
+     \label{Relatório com o resultado do treinamento no NeuroGrubi}
+  \end{figure}
+\end{block}
+\end{frame}
+
+\section{Conclusão}
+\begin{frame}{Conclusão}
+\begin{block}{}
+   \begin{itemize}
+    \item Grupos com renda mais elevada sentem maior falta de segurança.
+    \item Quanto menor a renda é maior a preocupação com a saúde pública.
+    \item A rede neural se mostrou eficiente na classificação de demandas em diferentes grupos sociais, isso permite o planejamento alinhado com as carências da sociedade.
+  \end{itemize}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}{Referências}
+  \bibliography{refs}
+\end{frame}
+
+
+\end{document}
+

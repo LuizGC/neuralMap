@@ -1,0 +1,128 @@
+\section{NeuroGrubi}
+
+Applications hosted on the Internet, or software as a service is an important 
+issue nowadays. The main reasons to consider migrating your application to cloud 
+projects are associated with reduced costs and increased output. Another 
+important advantage is the ease of updating the software, requiring only update 
+the application on the server and so all users can access the updates.
+
+However, to be able to provide a service in which you must use technologies
+work on the Internet. The NeuroGrubi was built using the language
+Javascript programming, the NodeJS \cite{nodejs} as language interpreter on the 
+server and MongoDB \cite{mongoDB}, one NoSQL database, used to store data for 
+neural network training.
+
+The library Brain.js \cite{brainjs} is a library with the Backpropagation 
+algorithm that is used to carry out the training of the neural network. At the 
+end of that library generates a function in javascript with the network already 
+trained.
+
+\subsection{Javascript e NodeJs}
+
+The choice of programming language such as Javascript support NeuroGrubi is 
+based facility that Javascript has to walk through objects. The objects in 
+javascript behave like lists, thereby simplifying the training algorithm of the 
+neural network. The algorithm rather than iterate over matrices, it iterate 
+over objects list.
+
+Another advantage in the choice of Javascript is its simple syntax of a loosely 
+typed scripting language and dynamic typing. This facilitated the implementation 
+of NeuroGrubi.
+
+The NodeJS is a platform for developing applications in javascript. It provides 
+an easy way to create scalable programs. As the user base grows NeuroGrubi, it 
+is necessary to support more users and therefore will need to add more servers. 
+The NodeJS allows this expansion simply.
+
+
+\subsection{MongoDB}
+
+MongoDB is a database document-oriented high-performance, open source, and 
+schema-free, written in C++. He is a mix between repositories based scalable 
+key / value and wealth of traditional features of relational databases.
+
+These features help design NeuroGrubi. As the databases for training the neural 
+network can be great, it makes the task of uploading the database arduous work. 
+A solution is to upload only once in the database and use it in training as 
+often as necessary.
+
+The problem is that the training data is not of a generalization making the use 
+of relational databases a complicated task. MongoDB makes the task of storing 
+data in varying formats a simple task. MongoDB stores the entire line-shaped 
+object, where each column represents an attribute.
+
+\subsection{The Application}
+
+First, as the NeuroGrubi works with private data the user, then must
+provide a username and password. Thus the system can only provide
+information the user entered in the system. The login screen is NeuroGrubi 
+shown in figure \ref{fig:1}.
+
+\begin{figure}[!htbp]
+  \begin{center}
+    \includegraphics[scale=0.24]{images/login}
+    \caption{Login Screen}
+    \label{fig:1}
+  \end{center}
+\end{figure}
+
+The second screen is to view the databases that are already contained in 
+NeuroGrubi. It also is possible upload others databases, as well as see the 
+databases are already in NeuroGrubi. Another possible action on this screen is 
+going to screen training Neural Network.
+
+\begin{figure}[!htbp]
+  \begin{center}
+    \includegraphics[scale=0.18]{images/listaBD}
+    \caption{Train Data Screen}
+    \label{fig:2}
+  \end{center}
+\end{figure}
+
+Third figure \ref{fig:3} shows how the data screen viewer appearance. 
+
+\begin{figure}[!htbp]
+  \begin{center}
+    \includegraphics[scale=0.18]{images/dataViwer}
+    \caption{Data Screen Viewer Appearance}
+    \label{fig:3}
+  \end{center}
+\end{figure}
+
+If you choose the train button, the screen directs you to NeuroGrubi training. 
+On screen training the user has access configuration variables Backpropagation 
+neural network used by the library Brais.JS. In this screen the User can 
+configure the following parameters of the network.
+
+\begin{itemize}
+ \item Learning Rate
+ \item Momentum
+ \item Error Threshold
+ \item Iteration
+ \item Hidden Layers
+ \item Node in each Hidden Layer
+ \item Inputs and Output 
+ \item Data for Test
+\end{itemize}
+
+Figure \ref{fig:4}  represents the configuration screen of the neural 
+network training parameters.
+
+\begin{figure}[!htbp]
+  \begin{center}
+    \includegraphics[scale=0.24]{images/confScreen}
+    \caption{Configuration Training Screen}
+    \label{fig:4}
+  \end{center}
+\end{figure}
+
+After training the NeuroGrubi shows a screen with the result of training as 
+shown on figure \ref{fig:5}
+
+\begin{figure}[!htbp]
+  \begin{center}
+    \includegraphics[scale=0.17]{images/resultscreen}
+    \caption{Train Result Screen}
+    \label{fig:5}
+  \end{center}
+\end{figure}
